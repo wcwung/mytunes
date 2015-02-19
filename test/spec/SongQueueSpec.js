@@ -41,8 +41,10 @@ describe('SongQueue', function() {
     it('removes the song from the queue', function() {
       var songQueue = new SongQueue([songData1, songData2]);
       song2 = songQueue.at(1);
+      console.log("songque length after adding 2 songs " + songQueue.length);
       expect(songQueue.length).to.equal(2);
-      songQueue.at(0).trigger('ended');
+      songQueue.at(0).trigger('dequeue');
+      console.log('songqueue length after removing 1 song ' + songQueue.length);
       expect(songQueue.length).to.equal(1);
       expect(songQueue.at(0)).to.equal(song2);
     });
