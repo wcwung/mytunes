@@ -14,9 +14,11 @@ var LibraryView = Backbone.View.extend({
     // console.log( this.$el.children().detach());
     this.$el.html('<th>Library</th>').append(
       this.collection.map(function(song){
+
         return new LibraryEntryView({model: song}).render();
       })
     );
+
   }
 
 });
