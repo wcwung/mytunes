@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html>
+  <header>
+      <script src="bower_components/jquery/jquery.min.js"></script>
+      <script src="bower_components/underscore/underscore.js"></script>
+      <script src="bower_components/backbone/backbone.js"></script>
+
+      <script src="data/data.js"></script>
+
+      <script src="models/SongModel.js"></script>
+      <script src="collections/Songs.js"></script>
+      <script src="collections/SongQueue.js"></script>
+      <script src="models/AppModel.js"></script>
+
+      <script src="views/PlayerView.js"></script>
+      <script src="views/LibraryView.js"></script>
+      <script src="views/LibraryEntryView.js"></script>
+      <script src="views/AppView.js"></script>
+      <script src="views/SongQueueEntryView.js"></script>
+      <script src="views/SongQueueView.js"></script>
+      <script src="views/CurrentSongView.js"></script>
+
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="assets/styles.css">
+  </header>
   <body>
     <!-- Scripts may be placed anywhere on a page. But FYI, they block rendering of elements
      below them until after the scripts load-->
-    <script src="bower_components/jquery/jquery.min.js"></script>
-    <script src="bower_components/underscore/underscore.js"></script>
-    <script src="bower_components/backbone/backbone.js"></script>
-
-    <script src="data/data.js"></script>
-
-    <script src="models/SongModel.js"></script>
-    <script src="collections/Songs.js"></script>
-    <script src="collections/SongQueue.js"></script>
-    <script src="models/AppModel.js"></script>
-
-    <script src="views/PlayerView.js"></script>
-    <script src="views/LibraryView.js"></script>
-    <script src="views/LibraryEntryView.js"></script>
-    <script src="views/AppView.js"></script>
-    <script src="views/SongQueueEntryView.js"></script>
-    <script src="views/SongQueueView.js"></script>
-
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
+    <div class="main-container">
+        <div class="cover-head">
+            <div class="now-playing">
+                <h1 class="song-name"></h1>
+                <h2 class="artist-name"></h2>
+            </div>
+            <div class="player-container">
+                
+            </div>
+        </div>
+    </div>
     <script>
       $(function(){
         // set up model objects
@@ -32,7 +46,9 @@
         var appView = new AppView({model: app});
 
         // put the view onto the screen
-        $('body').append(appView.render());
+        $('.main-container').append(appView.render());
+        // console.log(this.model.get('currentSong'));
+        $('.now-playing').append("<h1 class='song-name'>" +  + "</h1>");
       });
     </script>
   </body>

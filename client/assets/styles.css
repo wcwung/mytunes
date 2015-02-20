@@ -1,0 +1,56 @@
+body {
+	background: #f1f1f1;
+	font-family: "Helvetica Neue", sans-serif;
+}
+
+.main-container {
+	width: 800px;
+	min-height: 660px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 15px 40px;
+	border-radius: 5px;
+	background: #fff;
+
+	position: relative;
+}
+
+/*.cover-head:before {
+	content: "";
+	position: fixed;
+	display: block;
+	background-image: url('http://cdn.defjam.com/wp-content/uploads/2013/09/RRPressselect-1024x1024.jpg');
+	filter: blur(5px);
+	-webkit-filter: blur(5px);
+	width: 100%;
+	height: 240px;
+}
+*/.cover-head {
+	background-position: 0 20%;
+	position: fixed;
+	display: block;
+	background-image: url('http://cdn.defjam.com/wp-content/uploads/2013/09/RRPressselect-1024x1024.jpg');
+	width: 100%;
+	height: 240px;
+
+	width: 100%;
+	height: 240px;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.content-container {
+	margin-top: 250px;
+}
+
+.player-container {
+	width: 100%;
+	height: 40px;
+	background: rgba(256,256,256, 0.3);
+	position: absolute;
+	bottom: 0;
+}
